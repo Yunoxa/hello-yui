@@ -1,0 +1,15 @@
+#!/bin/bash
+
+parentDir=$( dirname -- "$( readlink -f -- "$0"; )"; )
+red='\033[0;31m'
+time=$(date +"%H")
+greeting="こんにちわ、$1先生！"
+
+if [ $time -gt 4 -a $time -lt 12 ]; then
+    greeting="おはよう、$1先生！"
+elif [ $time -gt 17 -o $time -lt 5 ]; then
+    greeting="こんばんは、$1先生〜"
+fi
+
+cat ${parentDir}/YuiLogo.sixel
+echo -e "${red}${greeting}\033[0m"
