@@ -1,1 +1,1 @@
-ln -s -r ./hello-yui /home/yunoxa/.local/bin/hello-yui
+ln -s -r ./hello-yui ~/.local/bin/hello-yui
